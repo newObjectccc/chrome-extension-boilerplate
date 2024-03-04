@@ -10,6 +10,12 @@
 - 🧨 This boilerplate adopts Manifest V3.
 - 💖 TypeScript supported.
 
+## Environment
+
+I recommend setup your development environment to this below:
+- node >= 20
+- pnpm >= 8
+
 ## Usage
 
 1. ```git clone git@github.com:newObjectccc/chrome-extension-boilerplate.git```
