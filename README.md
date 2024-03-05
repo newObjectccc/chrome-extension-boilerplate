@@ -2,7 +2,7 @@
 
 ## Chrome Extension (MV3) Boilerplate with React18 & TypeScript & Vite & NextUI
 
-[English] | [简体中文](https://github.com/newObjectccc/chrome-extension-boilerplate/blob/main/README-zh-Hans.md)
+English | [简体中文](https://github.com/newObjectccc/chrome-extension-boilerplate/blob/main/README-zh-Hans.md)
 
 ## Feature
 
