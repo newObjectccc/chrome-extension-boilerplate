@@ -35,3 +35,7 @@ dist/assets/index-DiwrgTda.css    1.39 kB │ gzip:  0.72 kB
 dist/assets/index-C7lZPRrh.js   142.63 kB │ gzip: 45.83 kB
 
 thanks to React framework, the js bundle has 142kb at least. i think its too big, so i considering to change to an other lightly framework.
+
+## 参考文档
+
+[Chrome开发文档](https://developer.chrome.com/docs?hl=zh-cn)
