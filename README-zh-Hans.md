@@ -2,6 +2,8 @@
 
 ## 基于 React18，TypeScript，Vite，NextUI 的 Manifest Version 3 的谷歌浏览器插件开发木板
 
+[English](https://github.com/newObjectccc/chrome-extension-boilerplate/main/README.md)|[简体中文]
+
 ## 功能
 
 - ✨ 通过监控你的src目录下的代码触发编译更新dist代码
