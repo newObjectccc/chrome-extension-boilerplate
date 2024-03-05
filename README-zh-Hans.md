@@ -2,7 +2,7 @@
 
 ## 基于 React18，TypeScript，Vite，NextUI 的 Manifest Version 3 的谷歌浏览器插件开发木板
 
-[English](https://github.com/newObjectccc/chrome-extension-boilerplate/main/README.md)|[简体中文]
+[English](https://github.com/newObjectccc/chrome-extension-boilerplate) | 简体中文
 
 ## 功能
 
