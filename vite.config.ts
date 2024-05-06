@@ -17,11 +17,11 @@ export default defineConfig({
       targets: [
         {
           src: 'manifest.json',
-          dest: ''
+          dest: '' // dist
         },
         {
           src: 'public/*',
-          dest: 'public'
+          dest: 'public' // dist/public
         }
       ]
     })
