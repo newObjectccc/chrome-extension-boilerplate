@@ -2,14 +2,26 @@
   "name": "Minimal Manifest",
   "version": "1.0.0",
   "description": "A basic example extension with only required keys",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "js": ["main.js"],
+      "matches": ["<all_urls>"]
+    }
+  ],
   "host_permissions": ["http://*/*", "https://*/*"],
   "icons": {
     "48": "public/icon-48.png",
     "128": "public/icon-128.png"
   },
   "manifest_version": 3,
-  "permissions": ["sidePanel", "tabs"],
+  "permissions": ["sidePanel", "tabs", "scripting"],
   "side_panel": {
-    "default_path": "index.html"
+    "default_path": "sidepanel.html"
   }
 }
