@@ -1,2 +1,4 @@
-function background() {}
+function background() {
+  console.log('background');
+}
 background();

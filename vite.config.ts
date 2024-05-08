@@ -12,13 +12,15 @@ export default defineConfig({
     }
   },
   build: {
-    copyPublicDir: false,
     rollupOptions: {
       input: {
-        popup: 'src/popup/popup.html',
-        sidepanel: 'src/sidepanel/sidepanel.html',
-        main: 'src/main.ts',
-        background: 'src/background.ts'
+        'src/popup/popup': resolve(__dirname, 'src/popup/popup.html'),
+        'src/sidepanel/sidepanel': resolve(__dirname, 'src/sidepanel/sidepanel.html'),
+        main: resolve(__dirname, 'src/main.ts'),
+        background: resolve(__dirname, 'src/background.ts')
+      },
+      output: {
+        entryFileNames: '[name].js'
       }
     }
   },
@@ -27,12 +29,8 @@ export default defineConfig({
     viteStaticCopy({
       targets: [
         {
-          src: 'manifest.json',
+          src: 'src/manifest.json',
           dest: '' // dist
-        },
-        {
-          src: 'public/*',
-          dest: 'public' // dist/public
         }
       ]
     })
