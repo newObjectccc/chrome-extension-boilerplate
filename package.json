@@ -28,6 +28,7 @@
     "@typescript-eslint/parser": "^7.0.2",
     "@vitejs/plugin-react-swc": "^3.5.0",
     "autoprefixer": "^10.4.17",
+    "chrome-launcher": "^1.1.1",
     "commitlint": "^18.6.1",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
