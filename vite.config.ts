@@ -2,6 +2,7 @@ import react from '@vitejs/plugin-react-swc';
 import { resolve } from 'path';
 import { defineConfig } from 'vite';
 import { viteStaticCopy } from 'vite-plugin-static-copy';
+import { viteChromeDevPlugin } from './vite-plugin-chrome-dev-helper';
 
 export default defineConfig({
   resolve: {
@@ -34,6 +35,7 @@ export default defineConfig({
           dest: '' // dist
         }
       ]
-    })
+    }),
+    viteChromeDevPlugin()
   ]
 });

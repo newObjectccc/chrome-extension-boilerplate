@@ -22,6 +22,7 @@
     "@commitlint/config-conventional": "^18.6.2",
     "@commitlint/prompt-cli": "^18.6.1",
     "@types/chrome": "^0.0.261",
+    "@types/chrome-remote-interface": "^0.31.14",
     "@types/react": "^18.2.56",
     "@types/react-dom": "^18.2.19",
     "@typescript-eslint/eslint-plugin": "^7.0.2",
