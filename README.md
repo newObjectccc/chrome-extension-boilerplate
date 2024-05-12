@@ -23,7 +23,7 @@ I recommend setup your development environment to this below:
 
 1. ```git clone git@github.com:newObjectccc/chrome-extension-boilerplate.git```
 2. ```pnpm install```
-3. ```pnpm start```
+3. ```pnpm dev```
 
 ## Reference
 
