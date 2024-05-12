@@ -1,8 +1,8 @@
 import react from '@vitejs/plugin-react-swc';
 import { resolve } from 'path';
 import { defineConfig } from 'vite';
+import { viteChromeDevPlugin } from 'vite-plugin-chrome-launcher';
 import { viteStaticCopy } from 'vite-plugin-static-copy';
-import { viteChromeDevPlugin } from './vite-plugin-chrome-dev-helper';
 
 export default defineConfig({
   resolve: {
