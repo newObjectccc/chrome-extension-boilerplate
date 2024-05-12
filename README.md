@@ -11,6 +11,7 @@ English | [简体中文](https://github.com/newObjectccc/chrome-extension-boiler
 - 💫 Beauty UI library NextUI@2.2.
 - 🧨 This boilerplate adopts Manifest V3.
 - 💖 TypeScript supported.
+- 💥 Run your Extension App in a sandbox chrome browser enviroment.
 
 ## Environment
 
@@ -23,8 +24,6 @@ I recommend setup your development environment to this below:
 1. ```git clone git@github.com:newObjectccc/chrome-extension-boilerplate.git```
 2. ```pnpm install```
 3. ```pnpm start```
-
-When the chrome launched, type "chrome://extensions" into the chrome address bar, then tap the Load unpacked button, and select the dist folder.
 
 ## Reference
 
