@@ -16,6 +16,9 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
+        /** 
+         *  如果添加了新的页面，请记得在此添加入口文件，否则rollup不会进行对应入口的构建操作。
+         */
         'src/popup/popup': resolve(__dirname, 'src/popup/popup.html'),
         'src/sidepanel/sidepanel': resolve(__dirname, 'src/sidepanel/sidepanel.html'),
         main: resolve(__dirname, 'src/main.ts'),
