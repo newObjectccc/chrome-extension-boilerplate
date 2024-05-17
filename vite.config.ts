@@ -31,13 +31,7 @@ export default defineConfig({
       }
     }
   },
-  plugins: [
-    react(),
-    viteChromeDevPlugin({
-      navigateUrl: 'https://baidu.com'
-    }),
-    generateManifest()
-  ]
+  plugins: [react(), viteChromeDevPlugin(), generateManifest()]
 });
 
 function generateManifest() {
