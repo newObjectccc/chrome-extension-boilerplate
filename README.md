@@ -49,6 +49,9 @@ dist
 └── manifest.json 由manifest生成而来
 ```
 
+> [!warning]
+> 如果你的插件涉及到`content_script`，那么不支持`ESM`，并且浏览器也不会让你加载外部包，这里建议修改打包配置并用原生`js`操作你的视图，如果你确实有非常复杂的视图需求，建议使用`iife`格式打包，并且通过`manualChunks: (id) => string`的设置（如果你的项目只涉及一个入口文件，那么可以忽略manualChunks，设置一下`format: 'iife'`即可，详细设置请参阅[vite文档](https://vitejs.dev/guide/build.html#chunking-strategy)或者[rollup文档](https://rollupjs.org/configuration-options/#output-manualchunks)），把所有的相关依赖打到同一个`js` `bundle`文件中，并且在技术选型上建议使用较小的构建产物的框架，如Vue，unocss等。
+
 ## 参考文档
 
 [Chrome开发文档](https://developer.chrome.com/docs?hl=zh-cn)
