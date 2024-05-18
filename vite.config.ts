@@ -34,6 +34,10 @@ export default defineConfig({
   plugins: [react(), viteChromeDevPlugin(), generateManifest()]
 });
 
+/**
+ * 建议根据自己的打包产物的目录结构来生成manifest.json
+ * 以下是根据 manifest.js 生成 manifest.json，具体生成，必须参考自你打包后的目录结构
+ */
 function generateManifest() {
   return {
     name: 'generate-manifest',
