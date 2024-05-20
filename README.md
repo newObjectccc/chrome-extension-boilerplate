@@ -65,9 +65,11 @@ import { initSelectionListener } from './pageListener';
 ```
 
 拆分一个js模块: `pageLinster.js`
+
 ![code2](https://github.com/newObjectccc/chrome-extension-boilerplate/assets/42132586/79c8dc07-52a5-4b06-953b-25af5edebbb1)
 
 把content相关资源打包成一个bundle`vite.config.ts`:
+
 ![code1](https://github.com/newObjectccc/chrome-extension-boilerplate/assets/42132586/1be5b2d4-19f0-49f3-9b73-6c88e730a451)
 
 或者你也可以多个bundle，但如果是多个bundle，建议用shadowDOM做隔离环境，并把每个bundle的导出打包为全局变量，引入时直接引入全局变量。
