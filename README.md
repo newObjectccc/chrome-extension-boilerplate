@@ -50,7 +50,27 @@ dist
 ```
 
 > [!warning]
-> 如果你的插件涉及到`content_script`，那么不支持`ESM`，并且浏览器也不会让你加载外部包，这里建议修改打包配置并用原生`js`操作你的视图，如果你确实有非常复杂的视图需求，建议使用`iife`格式打包，并且通过`manualChunks: (id) => string`的设置（如果你的项目只涉及一个入口文件，那么可以忽略manualChunks，设置一下`format: 'iife'`即可，详细设置请参阅[vite文档](https://vitejs.dev/guide/build.html#chunking-strategy)或者[rollup文档](https://rollupjs.org/configuration-options/#output-manualchunks)），把所有的相关依赖打到同一个`js` `bundle`文件中，并且在技术选型上建议使用较小的构建产物的框架，如Vue，unocss等， 并且如果你熟悉`web component`，其实会非常适合做`content_script`通过注入js来画ui的场景需求。
+> 如果你的插件涉及到`content_script`，浏览器不会让你加载外部包，这里建议修改打包配置并用原生`js`操作你的视图，如果你确实有非常复杂的视图需求，建议使用`iife`格式打包，并且通过`manualChunks: (id) => string`的设置（如果你的项目只涉及一个入口文件，那么可以忽略manualChunks，设置一下`format: 'iife'`即可，详细设置请参阅[vite文档](https://vitejs.dev/guide/build.html#chunking-strategy)或者[rollup文档](https://rollupjs.org/configuration-options/#output-manualchunks)），把所有的相关依赖打到同一个`js` `bundle`文件中，并且在技术选型上建议使用较小的构建产物的框架，如Vue，unocss等， 并且如果你熟悉`web component`，其实会非常适合做`content_script`通过注入js来画ui的场景需求。
+
+如果你在做`content_script`这种需求开发时，想拆分你的模块，以便后续维护，可以参考以下示例的设置：
+
+目录结构如下：
+
+![image](https://github.com/newObjectccc/chrome-extension-boilerplate/assets/42132586/4e4f14d8-66ed-4ac4-aa42-064a5ca95864)
+
+`content_script`主入口:
+```js
+// content.js
+import { initSelectionListener } from './pageListener';
+```
+
+拆分一个js模块: `pageLinster.js`
+![code2](https://github.com/newObjectccc/chrome-extension-boilerplate/assets/42132586/79c8dc07-52a5-4b06-953b-25af5edebbb1)
+
+把content相关资源打包成一个bundle`vite.config.ts`:
+![code1](https://github.com/newObjectccc/chrome-extension-boilerplate/assets/42132586/1be5b2d4-19f0-49f3-9b73-6c88e730a451)
+
+或者你也可以多个bundle，但如果是多个bundle，建议用shadowDOM做隔离环境，并把每个bundle的导出打包为全局变量，引入时直接引入全局变量。
 
 ## 参考文档
 
